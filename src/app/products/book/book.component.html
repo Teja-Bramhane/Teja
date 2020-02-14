@@ -1,0 +1,31 @@
+<h1 appHost>M HOST</h1>
+<div *ngFor="let book of books">
+  <div class="col s12 m3">
+    <div>
+      <img src="./../assets/img/HPbook.jpg" />
+      <span class="card-title">{{ book.Name }}</span
+      >`
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Verified</a>
+        </li>
+        <li class="nav-item">
+          <button (click)="functionOnWhichRedirectShouldHappen()">ROLES</button>
+        </li>
+      </ul>
+    </div>
+
+    <p [style.color]="book.bookColor">
+      {{ book.Name }}
+    </p>
+    <p [style.color]="book.bookColor">
+      {{ book.Price | discount: book.Price }}
+    </p>
+    <p appFirst>IS Discount</p>
+    <div class="card-action">
+      <p [style.color]="book.bookColor">
+        {{ book.Author }}
+      </p>
+    </div>
+  </div>
+</div>
